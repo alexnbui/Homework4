@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".MainActivity"
+    android:background="#FFF5E1">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:title="The Information Book App"
+        app:titleTextColor="@color/white"
+        android:backgroundTint="#d2b73c"/>
+
+    <androidx.gridlayout.widget.GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        app:columnCount="2"
+        app:rowCount="2"
+        android:padding="4dp">
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardCountries"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="1"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="4dp"
+            android:layout_margin="4dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:background="#FFFFFF">
+
+                <ImageView
+                    android:id="@+id/imageCountries"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:scaleType="centerCrop"
+                    app:srcCompat="@drawable/cardviewthecountries" />
+
+                <TextView
+                    android:id="@+id/textCountries"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="The Countries"
+                    android:textColor="#333333"
+                    android:textSize="16sp"
+                    android:gravity="center"
+                    android:padding="4dp"
+                    android:textStyle="bold"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardLeaders"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="1"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="4dp"
+            android:layout_margin="4dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:background="#FFFFFF">
+
+                <ImageView
+                    android:id="@+id/imageLeaders"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:scaleType="centerCrop"
+                    app:srcCompat="@drawable/cvtheleaders" />
+
+                <TextView
+                    android:id="@+id/textLeaders"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="The Leaders"
+                    android:textColor="#333333"
+                    android:textSize="16sp"
+                    android:gravity="center"
+                    android:padding="4dp"
+                    android:textStyle="bold"/>
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardMuseums"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="1"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="4dp"
+            android:layout_margin="4dp" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:background="#FFFFFF">
+
+                <ImageView
+                    android:id="@+id/imageMuseums"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/cardviewmuseum" />
+
+                <TextView
+                    android:id="@+id/textMuseums"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="The Museums"
+                    android:textColor="#333333"
+                    android:textSize="16sp"
+                    android:gravity="center"
+                    android:padding="4dp"
+                    android:textStyle="bold"/>
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardWonders"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="1"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="4dp"
+            android:layout_margin="4dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:background="#FFFFFF">
+
+                <ImageView
+                    android:id="@+id/imageWonders"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/cardviewsevenwonders" />
+
+                <TextView
+                    android:id="@+id/textWonders"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Seven Wonders of The World"
+                    android:textColor="#333333"
+                    android:textSize="14sp"
+                    android:gravity="center"
+                    android:padding="4dp"
+                    android:maxLines="2"
+                    android:ellipsize="end"
+                    android:textStyle="bold"/>
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+    </androidx.gridlayout.widget.GridLayout>
+
+</LinearLayout>
