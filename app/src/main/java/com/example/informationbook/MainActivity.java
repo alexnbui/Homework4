@@ -1,9 +1,14 @@
 package com.example.informationbook;
 
+import static android.content.ContentValues.TAG;
+
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
+import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import androidx.appcompat.widget.Toolbar;
 
@@ -19,6 +24,7 @@ Toolbar toolbar;
 CardView cardCountries, cardLeaders, cardMuseums, cardWonders;
 ImageView imageCountries, imageLeaders, imageMuseums, imageWonders;
 TextView textCountries, textLeaders, textMuseums, textWonders;
+ProgressBar progressBar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,6 +37,17 @@ TextView textCountries, textLeaders, textMuseums, textWonders;
         });
         addControls();
         addEvents();
+
+        // Hiển thị ProgressBar khi khởi động và ẩn sau 2 giây (sau khi khởi tạo)
+        if (progressBar != null) {
+            Log.e(TAG, "Processbar is set");
+            progressBar.setVisibility(View.VISIBLE);
+            new Handler().postDelayed(() -> {
+                if (progressBar != null) {
+                    progressBar.setVisibility(View.GONE);
+                }
+            }, 2000);
+        }
     }
     private void addControls(){
         toolbar = findViewById(R.id.toolbar);
@@ -50,6 +67,8 @@ TextView textCountries, textLeaders, textMuseums, textWonders;
         textLeaders = findViewById(R.id.textLeaders);
         textMuseums = findViewById(R.id.textMuseums);
         textWonders = findViewById(R.id.textWonders);
+
+        progressBar = findViewById(R.id.progressBar);
     }
 
     private void addEvents()

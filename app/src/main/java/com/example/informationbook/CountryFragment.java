@@ -53,6 +53,7 @@ public class CountryFragment extends Fragment {
         contentText.setMaxLines(Integer.MAX_VALUE); // Đảm bảo hiển thị toàn bộ nội dung
 
         imageView.setImageResource(imageResId);
+
         return view;
     }
 }
